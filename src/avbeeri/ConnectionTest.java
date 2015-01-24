@@ -16,7 +16,7 @@ import java.util.TimerTask;
 
 public class ConnectionTest {
 	private static final int PORT_NUMBER = 6667;
-	private static final String SERVER_ADDRESS = "irc.bondage.com";
+	private static final String SERVER_ADDRESS = "irc.dal.net";
 	
 	
 	static BufferedReader input;
@@ -83,12 +83,12 @@ public class ConnectionTest {
 			//output.flush();
 			
 			//System.in.read();
-			output.print("NICK mai|diy\r\n");
-			System.out.println("NICK mai|diy");
+			output.print("NICK test\r\n");
+			System.out.println("NICK test");
 			//output.flush();
 			//System.in.read();
-			output.print("USER Mai 8 * :Mai Valentine\r\n");
-			System.out.println("USER Mai 8 * :Mai Valentine");
+			output.print("USER Test 8 * :Real Name\r\n");
+			System.out.println("USER Test 8 * :Real Name");
 			output.flush();
 			
 			inputThread = new Thread() {
@@ -129,7 +129,7 @@ public class ConnectionTest {
 				
 			};
 			
-			output.print("JOIN #maitest\r\n");
+			output.print("JOIN #test\r\n");
 			output.flush();
 			inputThread.start();
 			System.out.println("Input started!");
